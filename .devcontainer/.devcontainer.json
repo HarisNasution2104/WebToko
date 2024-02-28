@@ -1,0 +1,23 @@
+{
+    "name": "Node.js Development",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "VARIANT": "14"
+      }
+    },
+    "forwardPorts": [3000],
+    "overrideCommand": false,
+    // Set *default* container specific settings.json values on container create.
+    "customizations": {
+      "settings": {
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+      },
+      "extensions": ["dbaeumer.vscode-eslint"],
+      "files": {
+        "exclude": [".yarn/cache", "node_modules", "lib", "dist", ".nuxt", ".next", "out"]
+      }
+    }
+  }
+  
